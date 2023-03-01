@@ -1,7 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-
 package com.huunguyen.tictactoe;
 
 /**
@@ -11,6 +10,11 @@ package com.huunguyen.tictactoe;
 public class TicTacToe {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        TicTacToe ttt = new TicTacToe();
+    }
+
+    public TicTacToe() {
+        View view = new View();
+        view.setVisible(true);
     }
 }
