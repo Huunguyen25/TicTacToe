@@ -1,10 +1,11 @@
 package com.huunguyen.tictactoe;
 
+import javax.swing.JButton;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-
 /**
  *
  * @author student
@@ -14,8 +15,12 @@ public class View extends javax.swing.JFrame {
     /**
      * Creates new form View
      */
+    boolean whoseTurn;
+    boolean gameOver;
+
     public View() {
         initComponents();
+        this.whoseTurn = false;
     }
 
     /**
@@ -27,7 +32,7 @@ public class View extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        label1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -40,8 +45,8 @@ public class View extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("jLabel1");
-
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton1.setToolTipText("");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -49,6 +54,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton2.setBackground(new java.awt.Color(255, 0, 0));
+        jButton2.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -56,6 +63,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton3.setBackground(new java.awt.Color(255, 0, 0));
+        jButton3.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton3.setToolTipText("");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -63,6 +72,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton4.setBackground(new java.awt.Color(255, 0, 0));
+        jButton4.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton4.setToolTipText("");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -70,6 +81,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton5.setBackground(new java.awt.Color(255, 0, 0));
+        jButton5.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton5.setToolTipText("");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -77,6 +90,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton6.setBackground(new java.awt.Color(255, 0, 0));
+        jButton6.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton6.setToolTipText("");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,6 +99,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton7.setBackground(new java.awt.Color(255, 0, 0));
+        jButton7.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton7.setToolTipText("");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -91,6 +108,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton8.setBackground(new java.awt.Color(255, 0, 0));
+        jButton8.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton8.setToolTipText("");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,6 +117,8 @@ public class View extends javax.swing.JFrame {
             }
         });
 
+        jButton9.setBackground(new java.awt.Color(255, 0, 0));
+        jButton9.setFont(new java.awt.Font("URW Gothic L", 1, 70)); // NOI18N
         jButton9.setToolTipText("");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -112,7 +133,7 @@ public class View extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
+                    .addComponent(label1)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -137,7 +158,7 @@ public class View extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(label1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -153,7 +174,7 @@ public class View extends javax.swing.JFrame {
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(25, Short.MAX_VALUE))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,12 +182,62 @@ public class View extends javax.swing.JFrame {
 
     private void onClick(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onClick
         // TODO add your handling code here:
+        JButton button = (JButton) evt.getSource();
+        if (button.getText().equals("") && !this.gameOver) {
+            String player = (this.whoseTurn) ? "X" : "O";
+            button.setText(player);
+            String winner = this.isWinner();
+            if (!winner.equals("")){
+                label1.setText(winner+" is winner");
+                this.gameOver = true;
+            }
+            
+            this.whoseTurn = !this.whoseTurn;
+        }
     }//GEN-LAST:event_onClick
+    private String isWinner() {
+        // Get the text contents of each button.  
+        // Be sure you're accessing the
+        // buttons in the order you want.  
+        // The Netbeans UI sometimes mixes up
+        // the numbers on the button names so they're not in the 
+        // order you expect
+        String[][] status = new String[3][3];
+        status[0][0] = jButton1.getText();
+        status[0][1] = jButton2.getText();
+        status[0][2] = jButton3.getText();
+        status[1][0] = jButton4.getText();
+        status[1][1] = jButton5.getText();
+        status[1][2] = jButton6.getText();
+        status[2][0] = jButton7.getText();
+        status[2][1] = jButton8.getText();
+        status[2][2] = jButton9.getText();
+
+        // Check the rows and columns for a tic tac toe
+        for (int i = 0; i < 3; i++) {
+            if (status[i][0].equals(status[i][1]) && status[i][0].equals(status[i][2])) {
+                return status[i][0];
+            }
+            if (status[0][i].equals(status[1][i]) && status[0][i].equals(status[2][i])) {
+                return status[0][i];
+            }
+        }
+
+        // Check the diagonals
+        if (status[0][0].equals(status[1][1]) && status[0][0].equals(status[2][2])) {
+            return status[0][0];
+        }
+        if (status[0][2].equals(status[1][1]) && status[0][2].equals(status[2][0])) {
+            return status[0][2];
+        }
+
+        // If we haven't found it, then return a blank string
+        return "";
+    }
 
     /**
      * @param args the command line arguments
      */
-    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -178,6 +249,6 @@ public class View extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel label1;
     // End of variables declaration//GEN-END:variables
 }
