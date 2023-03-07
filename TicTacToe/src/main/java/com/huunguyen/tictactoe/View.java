@@ -17,6 +17,7 @@ public class View extends javax.swing.JFrame {
      */
     boolean whoseTurn;
     boolean gameOver;
+    boolean tie;
 
     public View() {
         initComponents();
@@ -187,11 +188,15 @@ public class View extends javax.swing.JFrame {
             String player = (this.whoseTurn) ? "X" : "O";
             button.setText(player);
             String winner = this.isWinner();
-            if (!winner.equals("")){
-                label1.setText(winner+" is winner");
+            boolean tie = this.isTie();
+            if (tie) {
+                label1.setText("a tie");
+            }
+            if (!winner.equals("")) {
+                label1.setText(winner + " is winner");
                 this.gameOver = true;
             }
-            
+
             this.whoseTurn = !this.whoseTurn;
         }
     }//GEN-LAST:event_onClick
@@ -215,10 +220,10 @@ public class View extends javax.swing.JFrame {
 
         // Check the rows and columns for a tic tac toe
         for (int i = 0; i < 3; i++) {
-            if (status[i][0].equals(status[i][1]) && status[i][0].equals(status[i][2])) {
+            if (status[i][0].equals(status[i][1]) && status[i][0].equals(status[i][2]) && !status[i][0].equals("")) {
                 return status[i][0];
             }
-            if (status[0][i].equals(status[1][i]) && status[0][i].equals(status[2][i])) {
+            if (status[0][i].equals(status[1][i]) && status[0][i].equals(status[2][i]) && !status[0][i].equals("")) {
                 return status[0][i];
             }
         }
@@ -233,6 +238,27 @@ public class View extends javax.swing.JFrame {
 
         // If we haven't found it, then return a blank string
         return "";
+    }
+
+    private boolean isTie() {
+        String[][] status = new String[3][3];
+        status[0][0] = jButton1.getText();
+        status[0][1] = jButton2.getText();
+        status[0][2] = jButton3.getText();
+        status[1][0] = jButton4.getText();
+        status[1][1] = jButton5.getText();
+        status[1][2] = jButton6.getText();
+        status[2][0] = jButton7.getText();
+        status[2][1] = jButton8.getText();
+        status[2][2] = jButton9.getText();
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (status [i][j].equals("")) {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
     /**
